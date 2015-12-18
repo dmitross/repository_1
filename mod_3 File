@@ -1,0 +1,36 @@
+abstract public class File {
+    public  void method () {
+        System.out.println("test");
+
+    }
+
+    public static class Txt extends File {
+        public static void main (String[] args){
+    
+        }
+    }
+
+    public static class Audio extends File {
+        public static void main (String[] args){
+    
+        }
+    }
+
+    public static class Image extends  File {
+        public static void main (String[] args){
+    
+        }
+    }
+
+    public static class Directory {
+        public static void main (String[] args){
+            Txt t = new Txt();
+            Audio a = new Audio();
+            Image i = new Image();
+    
+            t.method();
+            a.method();
+            i.method();
+        }
+    }
+}
