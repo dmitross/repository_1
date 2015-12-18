@@ -1,0 +1,36 @@
+abstract public class MusicalInstrument {
+    public void  metod (){
+        System.out.println("test");
+    }
+
+    public static class Guitar extends MusicalInstrument {
+        public static void main (String[] args){
+    
+        }
+    }
+
+    public static class Pianoforte extends MusicalInstrument {
+        public static void main (String[] args){
+    
+        }
+    }
+
+    public static class Trumpet extends MusicalInstrument {
+        public static void main (String[] args){
+    
+        }
+    }
+
+    public static class MusicShop {
+        public static void main (String[] args){
+    
+            Guitar g = new Guitar();
+            Pianoforte p = new Pianoforte();
+            Trumpet t = new Trumpet();
+    
+            g.metod();
+            p.metod();
+            t.metod();
+        }
+    }
+}
