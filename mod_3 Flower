@@ -1,0 +1,51 @@
+abstract public class Flower {
+    public void method (){
+        System.out.println("test");
+    }
+
+    public static class Chamomile extends Flower {
+        public static void main (String[] args){
+        }
+    }
+
+    public static class Aster extends Flower {
+        public static void main (String[] args){
+        }
+    }
+
+    public static class Tulip extends Flower {
+        public static void main (String[] args){
+        }
+    }
+
+    public static class Rose extends Flower {
+        public void testr (){
+            System.out.println("test rose");
+        }
+        public static void main (String[] args){
+        }
+    }
+
+    public static class Rosebush extends Rose {
+        public static void main (String[] args){
+            Rose r = new Rose();
+            r.testr();
+        }
+    }
+
+    public static class BouquetOfFlowers {
+        public static void main (String[] args){
+
+            Aster a = new Aster();
+            Chamomile c = new Chamomile();
+            Rose r = new Rose();
+            Tulip t = new Tulip();
+
+            a.method();
+            c.method();
+            r.method();
+            t.method();
+
+        }
+    }
+}
