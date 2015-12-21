@@ -1,0 +1,38 @@
+public class Test {
+    public static void main(String[] args){
+        Temperature x = new Temperature();
+
+        CelsiusToFahrenheit cToF = new CelsiusToFahrenheit();
+        FahrenheitToCelsius fToC = new FahrenheitToCelsius();
+
+        System.out.println("Celsius to Fahrenheit " + x.temperature(cToF));
+        System.out.println("Fahrenheit to Celsius " + x.temperature(fToC));
+    }
+
+    public static class Temperature {
+       public double temperature (Temperatureable degr) {return degr.getResult(); }
+    }
+
+    public static class FahrenheitToCelsius implements Temperatureable {
+        double f = 70;
+        @Override
+        public double getResult(){
+            return (f-32)/1.8;
+        }
+    }
+
+    public static class CelsiusToFahrenheit implements Temperatureable {
+        double c = 23;
+        @Override
+        public double getResult () {
+            return (c*1.8)+32;
+        }
+
+
+
+    }
+
+    public static interface Temperatureable {
+        double getResult();
+    }
+}
